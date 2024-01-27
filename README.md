@@ -1,9 +1,20 @@
-This is a sample Rails application from Docker for Rails Developers (PragProg).
-​ t was generated using Docker without Ruby installed on the local machine.
-​ 	
-​We're using the app to discover the wonderful world of Rails with Docker.
+Изучаем докер с помощью статьи:
+http://onreader.mdl.ru/DockerRailsDevelopersApplicationsEverywhere/content/Ch01.html
 
-Это образец приложения Rails из книги Docker for Rails Developers (PragProg).
-Он был сгенерирован при помощи Docker без установленного в вашей локальной машине Ruby.
+Изученные команды:
 
-Мы применяем данное прикладное приложение для исследования прекрасного мира Rails с использованием Docker.
+Docker:
+docker image prune - удаляет подвисшие образы
+docker container prune - высвобождение всех ресурсов за один проход
+
+Docker-compose:
+docker-compose ps
+docker-compose up
+docker-compose up -d - запускает компосе, но вывод совершенных процессов не отображает
+docker-compose run <service_name>
+docker-compose down
+docker-compose stop <service_name>
+docker-compose​​ ​​logs​​ ​​-f​​ ​​web​ - обнаруживает записи показывающие, что наш сервер Rails был запущен
+docker-compose exec <service name> <some command> - помогает запускать одноразовые команды в исполняемом контейнере
+docker-compose build <service​​ ​​name> - Мы можем запросить для себя Compose собрать наши образы вместо применения лежащих в основе команд docker build
+
