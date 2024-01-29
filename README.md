@@ -6,6 +6,8 @@ http://onreader.mdl.ru/DockerRailsDevelopersApplicationsEverywhere/content/Ch01.
 Docker:
 docker image prune - удаляет подвисшие образы
 docker container prune - высвобождение всех ресурсов за один проход
+docker run --name redis-container redis - скачиваем и запускаем redis
+docker network ls - перечесление сетевых сред
 
 Docker-compose:
 docker-compose ps
@@ -18,3 +20,5 @@ docker-compose​​ ​​logs​​ ​​-f​​ ​​web​ - обнару
 docker-compose exec <service name> <some command> - помогает запускать одноразовые команды в исполняемом контейнере
 docker-compose build <service​​ ​​name> - Мы можем запросить для себя Compose собрать наши образы вместо применения лежащих в основе команд docker build
 
+docker-compose run --rm redis redis-cli -h redis - можно запустить сервис консоль redis с помощью данной команды
+"docker-compose run вместо exec - специально для того чтобы наш redis-cli исполнялся в неком новом, обособленном контейнере"
