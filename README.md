@@ -22,3 +22,7 @@ docker-compose build <service​​ ​​name> - Мы можем запроси
 
 docker-compose run --rm redis redis-cli -h redis - можно запустить сервис консоль redis с помощью данной команды
 "docker-compose run вместо exec - специально для того чтобы наш redis-cli исполнялся в неком новом, обособленном контейнере"
+
+docker-compose run --rm database psql -U postgres -h database - этой командой проверяем, что реально создался ли докер postgres, имеем ли доступ к консоли и также можем проверить наличие созданной базы данных
+
+docker-compose up -d --force-recreate web - пересобирает контейнер web заново
